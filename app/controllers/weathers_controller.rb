@@ -23,4 +23,4 @@ class WeathersController < ApplicationController
   def weather_params
     params.require(:weather).permit(:temp, :humidity, :wind)
   end
-end
+end  
