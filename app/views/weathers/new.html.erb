@@ -1,0 +1,9 @@
+<h1>Enter Weather Data</h1>
+
+<%= form_with model: @weather do |f| %>
+  Temp: <%= f.number_field :temp %><br>
+  Humidity: <%= f.number_field :humidity %><br>
+  Wind: <%= f.number_field :wind %><br>
+
+  <%= f.submit "Predict" %>
+<% end %>

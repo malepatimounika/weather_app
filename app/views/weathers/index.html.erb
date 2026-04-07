@@ -1,0 +1,21 @@
+<h1>Weather Predictions</h1>
+
+<table>
+  <tr>
+    <th>Temp</th>
+    <th>Humidity</th>
+    <th>Wind</th>
+    <th>Rain?</th>
+  </tr>
+
+  <% @weathers.each do |w| %>
+    <tr>
+      <td><%= w.temp %></td>
+      <td><%= w.humidity %></td>
+      <td><%= w.wind %></td>
+      <td><%= w.rain ? "Yes" : "No" %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New Prediction", new_weather_path %>
