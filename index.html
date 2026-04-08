@@ -5,18 +5,27 @@
 </head>
 <body>
 
-  <h1>Weather App 🌦️</h1>
+  <h1>Weather Prediction 🌦️</h1>
 
-  <input type="text" id="city" placeholder="Enter city name">
-  <button onclick="showCity()">Search</button>
+  <input type="number" id="temp" placeholder="Temperature (°C)"><br><br>
+  <input type="number" id="humidity" placeholder="Humidity (%)"><br><br>
+  <input type="number" id="wind" placeholder="Wind Speed"><br><br>
+
+  <button onclick="checkWeather()">Check</button>
 
   <p id="result"></p>
 
   <script>
-    function showCity() {
-      let city = document.getElementById("city").value;
-      document.getElementById("result").innerText =
-        "You entered: " + city;
+    function checkWeather() {
+      let temp = document.getElementById("temp").value;
+      let humidity = document.getElementById("humidity").value;
+      let wind = document.getElementById("wind").value;
+
+      if (humidity > 70 && temp < 30) {
+        document.getElementById("result").innerText = "🌧️ It may rain";
+      } else {
+        document.getElementById("result").innerText = "☀️ No rain";
+      }
     }
   </script>
 
